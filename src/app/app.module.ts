@@ -5,22 +5,23 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './_includes/header/header.component';
 import { FooterComponent } from './_includes/footer/footer.component';
 import { SidebarComponent } from './_includes/sidebar/sidebar.component';
-import { HomeComponent } from './_modules/home/home.component';
-import { UsersComponent } from './_modules/users/users.component';
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './_modules/dashboard/dashboard.component';
+import { AuthComponent } from './_modules/auth/auth.component';
+import { PageNotFoundComponent } from './_shared/components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AuthComponent,
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    HomeComponent,
-    UsersComponent
+    DashboardComponent,
+    PageNotFoundComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
